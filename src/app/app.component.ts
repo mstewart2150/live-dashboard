@@ -20,7 +20,9 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     this.fetchData();
-    interval(30000).subscribe(() => {
+    
+    // Poll data every 5 seconds
+    interval(5000).subscribe(() => {
       this.fetchData();
     });
   }
